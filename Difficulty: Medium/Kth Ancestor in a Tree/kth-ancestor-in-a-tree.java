@@ -108,6 +108,8 @@ System.out.println("~");
     }
 }
 // } Driver Code Ends
+
+
 //User function Template for Java ...
 /*
 Structure of Node class is:
@@ -124,37 +126,45 @@ class Node {
 
 class Solution
 {
-    public static int solution(Node root, int k,int node,ArrayList<Integer> list){
-       if(root == null) return -1;
-       list.add(root.data);
-       if(root.data == node)
-       return node;
-       int left = solution(root.left, k, node,list);
-       
-       if(left != -1){
-        return left; 
-       }
-       int right = solution(root.right, k, node,list);
-       if(right != -1){
-        return right;  
-       }
-       else {
-           list.remove(list.size()-1);
-           return -1;
-       }
+    static int x = 0;
+    static boolean flag = false;
+    public static int solution(Node root,int node){
+       if (root == null) return -1;
+
+        // If the current node is the target node
+        if (root.data == node) {
+            return root.data;
+        }
+
+        // Search in the left and right subtrees
+        int left = solution(root.left, node);
+        int right = solution(root.right, node);
+
+        // If the node is not found in either subtree
+        if (left == -1 && right == -1) return -1;
+
+        // If the node is found in one of the subtrees
+        x--;
+        if (x <= 0 && !flag) {
+            flag = true; // Mark the ancestor as found
+            return root.data; // Return the current node as the ancestor
+        }
+
+        // Return the valid ancestor path
+        return (left != -1) ? left : right;
+
+    
     }
-    public int kthAncestor(Node root, int k, int node)
+    public static int kthAncestor(Node root, int k, int node)
     {
-        //Write your code here
-        ArrayList<Integer> list = new ArrayList<>();
-        solution(root,k,node,list);
-        if(list.size()>k){
-            int ans = list.get((list.size()-1)-k);
-            return ans;
-        }
-        else{
-            return -1;
-        }
+        x = k;
+        flag = false;
+        int ans = solution(root,node);
+        if(root.data == node || flag == false)
+        return -1;
+        
+        return ans;
+        
         
         
     }
