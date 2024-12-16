@@ -1,0 +1,10 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/maximum-sum-of-non-adjacent-nodes/1">Maximum sum of Non-adjacent nodes</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a binary tree with a value associated with each node, we need to choose a subset of these nodes such that the sum of chosen nodes is maximum under a constraint that no two chosen nodes in the subset should be directly connected that is, if we have taken a node in our sum then we can’t take its any children or parents in consideration and vice versa.</span></p>
+<p><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 18px;"><strong>Input:<br></strong><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/880845/Web/Other/blobid0_1732598044.png" width="318" height="282">
+<strong>Output: </strong>11<strong>
+Explanation: </strong>The maximum sum is sum of node 11.<br><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/880845/Web/Other/blobid1_1732598102.png" width="317" height="278"></span></pre>
+<pre><span style="font-size: 18px;"><strong>Input:
+</strong><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/880845/Web/Other/blobid2_1732598208.png" width="318" height="280"> <br><strong>Output: </strong>16<strong>
+Explanation: </strong>The maximum sum is sum of nodes 1 4 5 6, i.e 16. These nodes are non adjacent.<br><img src="https://media.geeksforgeeks.org/img-practice/prod/addEditProblem/880845/Web/Other/blobid3_1732598283.png" width="319" height="282"><br></span></pre>
+<div><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ Number of nodes in the tree ≤ 10<sup>4</sup></span></div>
+<div><span style="font-size: 18px;">1 ≤ Value of each node ≤ 10<sup>5</sup></span></div></div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Flipkart</code>&nbsp;<code>Amazon</code>&nbsp;<code>Google</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Tree</code>&nbsp;<code>Data Structures</code>&nbsp;
